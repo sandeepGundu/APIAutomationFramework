@@ -1,0 +1,518 @@
+[2025-06-23 11:58:28] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 11:58:28] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 11:58:30] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 11:58:30] [INFO ] - Validating user list in response...
+[2025-06-23 12:03:31] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 12:03:31] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 12:03:32] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 12:03:32] [INFO ] - Validating user list in response...
+[2025-06-23 12:08:36] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 12:08:36] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 12:08:37] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 12:08:37] [INFO ] - Validating user list in response...
+[2025-06-23 12:09:37] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 12:09:37] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 12:09:38] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 12:09:38] [INFO ] - Validating user list in response...
+[2025-06-23 12:11:30] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 12:11:30] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 12:11:31] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 12:11:31] [INFO ] - Validating user list in response...
+[2025-06-23 12:12:02] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 12:12:02] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 12:12:03] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 12:12:03] [INFO ] - Validating user list in response...
+[2025-06-23 12:16:20] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 12:16:20] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 12:16:21] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 12:16:21] [INFO ] - Validating user list in response...
+[2025-06-23 12:18:32] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 12:18:32] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 12:18:33] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 12:18:33] [INFO ] - Validating user list in response...
+[2025-06-23 12:27:53] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 12:27:53] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 12:27:54] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 12:27:54] [INFO ] - Validating user list in response...
+[2025-06-23 12:28:25] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 12:28:25] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 12:28:26] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 12:28:26] [INFO ] - Validating user list in response...
+[2025-06-23 12:34:29] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 12:34:29] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 12:34:30] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 12:34:30] [INFO ] - Validating user list in response...
+[2025-06-23 12:36:26] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 12:36:26] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 12:36:27] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 12:36:27] [INFO ] - Validating user list in response...
+[2025-06-23 14:17:41] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 14:17:41] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 14:17:42] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 14:17:42] [INFO ] - Validating user list in response...
+[2025-06-23 14:24:41] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 14:24:41] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 14:24:42] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 14:24:42] [INFO ] - Validating user list in response...
+[2025-06-23 14:26:01] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 14:26:01] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 14:26:02] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 14:26:02] [INFO ] - Validating user list in response...
+[2025-06-23 14:26:43] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 14:26:43] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 14:26:44] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 14:26:44] [INFO ] - Validating user list in response...
+[2025-06-23 14:30:20] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 14:30:20] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 14:30:21] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 14:30:21] [INFO ] - Validating user list in response...
+[2025-06-23 14:44:20] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 14:44:20] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 14:44:21] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 14:44:21] [INFO ] - Validating user list in response...
+[2025-06-23 15:13:22] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:13:22] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 15:13:24] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 15:13:24] [INFO ] - Validating user list in response...
+[2025-06-23 15:14:08] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:14:08] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 15:14:09] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 15:14:09] [INFO ] - Validating user list in response...
+[2025-06-23 15:32:23] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:32:23] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 15:32:25] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 15:32:25] [INFO ] - Validating user list in response...
+[2025-06-23 15:33:43] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:33:43] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 15:33:45] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 15:33:45] [INFO ] - Validating user list in response...
+[2025-06-23 15:37:19] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:37:19] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:37:19] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:37:19] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 15:37:19] [INFO ] - Sending GET request to endpoint: /api/users/23
+[2025-06-23 15:37:19] [INFO ] - Sending GET request to endpoint: /api/users/2
+[2025-06-23 15:37:21] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 15:37:21] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 15:37:21] [INFO ] - Validating user list in response...
+[2025-06-23 15:37:22] [INFO ] - Asserting response code: expected = 404, actual = 401
+[2025-06-23 15:38:36] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:38:36] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:38:36] [INFO ] - Sending GET request to endpoint: /api/users/23
+[2025-06-23 15:38:36] [INFO ] - Sending GET request to endpoint: /api/users/2
+[2025-06-23 15:38:38] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 15:38:39] [INFO ] - Asserting response code: expected = 404, actual = 401
+[2025-06-23 15:39:51] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:39:51] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:39:52] [INFO ] - Sending GET request to endpoint: /api/users/23
+[2025-06-23 15:39:52] [INFO ] - Sending GET request to endpoint: /api/users/2
+[2025-06-23 15:39:53] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 15:39:54] [INFO ] - Asserting response code: expected = 401, actual = 401
+[2025-06-23 15:40:37] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:40:37] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:40:37] [INFO ] - Sending GET request to endpoint: /api/users/23
+[2025-06-23 15:40:37] [INFO ] - Sending GET request to endpoint: /api/users/2
+[2025-06-23 15:40:39] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 15:40:39] [INFO ] - Asserting response code: expected = 401, actual = 401
+[2025-06-23 15:41:15] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:41:15] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:41:15] [INFO ] - Sending GET request to endpoint: /api/users/23
+[2025-06-23 15:41:15] [INFO ] - Sending GET request to endpoint: /api/users/2
+[2025-06-23 15:41:17] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 15:41:17] [INFO ] - Asserting response code: expected = 401, actual = 401
+[2025-06-23 15:44:23] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:44:24] [INFO ] - Sending GET request to endpoint: /api/users/2
+[2025-06-23 15:44:26] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 15:45:30] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:45:30] [INFO ] - Sending GET request to endpoint: /api/users/2
+[2025-06-23 15:45:32] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 15:46:31] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:46:31] [INFO ] - Sending GET request to endpoint: /api/users/2
+[2025-06-23 15:46:33] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 15:47:14] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:47:15] [INFO ] - Sending GET request to endpoint: /api/users/2
+[2025-06-23 15:47:17] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 15:47:27] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:47:27] [INFO ] - Sending GET request to endpoint: /api/users/23
+[2025-06-23 15:47:29] [INFO ] - Asserting response code: expected = 401, actual = 401
+[2025-06-23 15:47:53] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:47:53] [INFO ] - Sending GET request to endpoint: /api/users/23
+[2025-06-23 15:47:56] [INFO ] - Asserting response code: expected = 401, actual = 401
+[2025-06-23 15:51:03] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:51:03] [INFO ] - Sending GET request to endpoint: /api/users/23
+[2025-06-23 15:51:05] [INFO ] - Asserting response code: expected = 401, actual = 401
+[2025-06-23 15:51:20] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:51:20] [INFO ] - Sending GET request to endpoint: /api/users/23
+[2025-06-23 15:51:23] [INFO ] - Asserting response code: expected = 401, actual = 401
+[2025-06-23 15:51:35] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:51:36] [INFO ] - Sending GET request to endpoint: /api/users/23
+[2025-06-23 15:51:39] [INFO ] - Asserting response code: expected = 401, actual = 401
+[2025-06-23 15:51:57] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:51:57] [INFO ] - Sending GET request to endpoint: /api/users/23
+[2025-06-23 15:51:59] [INFO ] - Asserting response code: expected = 401, actual = 401
+[2025-06-23 15:51:59] [INFO ] - Response body...{"error":"Missing API key.","how_to_get_one":"https://reqres.in/signup"}
+[2025-06-23 15:55:47] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:55:47] [INFO ] - Sending GET request to endpoint: /api/users/23
+[2025-06-23 15:55:50] [INFO ] - Asserting response code: expected = 401, actual = 404
+[2025-06-23 15:56:21] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:56:21] [INFO ] - Sending GET request to endpoint: /api/users/23
+[2025-06-23 15:56:24] [INFO ] - Asserting response code: expected = 404, actual = 404
+[2025-06-23 15:56:24] [INFO ] - Response body...{}
+[2025-06-23 15:57:23] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:57:23] [INFO ] - Sending GET request to endpoint: /api/users/23
+[2025-06-23 15:57:25] [INFO ] - Asserting response code: expected = 404, actual = 404
+[2025-06-23 15:57:25] [INFO ] - Response body...false
+[2025-06-23 15:58:08] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:58:08] [INFO ] - Sending GET request to endpoint: /api/users/23
+[2025-06-23 15:58:11] [INFO ] - Asserting response code: expected = 404, actual = 404
+[2025-06-23 15:58:11] [INFO ] - Response body...false
+[2025-06-23 15:58:50] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:58:50] [INFO ] - Sending GET request to endpoint: /api/users/23
+[2025-06-23 15:58:53] [INFO ] - Asserting response code: expected = 404, actual = 404
+[2025-06-23 15:58:53] [INFO ] - Response body...{}
+[2025-06-23 15:59:37] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 15:59:37] [INFO ] - Sending GET request to endpoint: /api/users/23
+[2025-06-23 15:59:39] [INFO ] - Asserting response code: expected = 404, actual = 404
+[2025-06-23 15:59:39] [INFO ] - Response body...{}
+[2025-06-23 16:04:50] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 16:04:50] [INFO ] - Sending GET request to endpoint: /api/users/23
+[2025-06-23 16:04:52] [INFO ] - Asserting response code: expected = 404, actual = 404
+[2025-06-23 16:27:58] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 16:27:58] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 16:27:58] [INFO ] - Sending GET request to endpoint: /api/users/23
+[2025-06-23 16:27:58] [INFO ] - Sending GET request to endpoint: /api/users/2
+[2025-06-23 16:28:00] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 16:28:00] [INFO ] - Asserting response code: expected = 404, actual = 404
+[2025-06-23 18:33:41] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 18:33:41] [INFO ] - Sending GET request to endpoint: /api/users/23
+[2025-06-23 18:33:43] [INFO ] - Asserting response code: expected = 404, actual = 404
+[2025-06-23 18:34:15] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 18:34:15] [INFO ] - Sending GET request to endpoint: /api/users/23
+[2025-06-23 18:34:17] [INFO ] - Asserting response code: expected = 404, actual = 401
+[2025-06-23 18:34:59] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 18:34:59] [INFO ] - Sending GET request to endpoint: /api/users/23
+[2025-06-23 18:35:03] [INFO ] - Asserting response code: expected = 401, actual = 401
+[2025-06-23 18:45:08] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 18:45:08] [INFO ] - Sending GET request to endpoint: /api/users/23
+[2025-06-23 18:45:10] [INFO ] - Asserting response code: expected = 401, actual = 404
+[2025-06-23 18:45:35] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 18:45:35] [INFO ] - Sending GET request to endpoint: /api/users/2
+[2025-06-23 18:45:37] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 18:45:38] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 18:45:38] [INFO ] - Sending GET request to endpoint: /api/users/23
+[2025-06-23 18:45:38] [INFO ] - Asserting response code: expected = 404, actual = 404
+[2025-06-23 18:45:49] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 18:45:49] [INFO ] - Sending GET request to endpoint: /api/users/2
+[2025-06-23 18:45:51] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 18:51:12] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 18:51:12] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 18:51:16] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 18:51:16] [INFO ] - Validating user list in response...
+[2025-06-23 19:01:10] [INFO ] - ==> Scenario Setup: Starting API Test
+[2025-06-23 19:01:11] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 19:01:11] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 19:01:13] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 19:01:13] [INFO ] - Validating user list in response...
+[2025-06-23 19:01:15] [INFO ] - ==> Scenario Teardown: Completed API Test
+[2025-06-23 19:17:15] [INFO ] - ==> Scenario Setup: Starting API Test
+[2025-06-23 19:17:15] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 19:17:15] [INFO ] - Sending POST to /api/login
+[2025-06-23 19:17:16] [INFO ] - ==> Scenario Teardown: Completed API Test
+[2025-06-23 19:18:34] [INFO ] - ==> Scenario Setup: Starting API Test
+[2025-06-23 19:18:35] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 19:18:35] [INFO ] - Sending POST to /api/login
+[2025-06-23 19:18:37] [INFO ] - Login response: {"token":"QpwL5tke4Pnpja7X4"}
+[2025-06-23 19:18:37] [INFO ] - ==> Scenario Teardown: Completed API Test
+[2025-06-23 19:22:57] [INFO ] - ==> Scenario Setup: Starting API Test
+[2025-06-23 19:22:57] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 19:22:57] [INFO ] - Sending POST to /api/login
+[2025-06-23 19:22:59] [INFO ] - Login response: {"token":"QpwL5tke4Pnpja7X4"}
+[2025-06-23 19:23:00] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 19:23:00] [INFO ] - Received token: QpwL5tke4Pnpja7X4
+[2025-06-23 19:23:00] [INFO ] - ==> Scenario Teardown: Completed API Test
+[2025-06-23 19:40:19] [INFO ] - ==> Scenario Setup: Starting API Test
+[2025-06-23 19:40:19] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 19:40:19] [INFO ] - Sending GET request to endpoint: /api/users/23
+[2025-06-23 19:40:21] [INFO ] - Asserting response code: expected = 404, actual = 404
+[2025-06-23 19:40:21] [INFO ] - ==> Scenario Teardown: Completed API Test
+[2025-06-23 19:40:36] [INFO ] - ==> Scenario Setup: Starting API Test
+[2025-06-23 19:40:37] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 19:40:37] [INFO ] - Sending GET request to endpoint: /api/users/2
+[2025-06-23 19:40:39] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 19:40:40] [INFO ] - ==> Scenario Teardown: Completed API Test
+[2025-06-23 19:40:55] [INFO ] - ==> Scenario Setup: Starting API Test
+[2025-06-23 19:40:55] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 19:40:55] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-23 19:40:57] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-23 19:40:57] [INFO ] - Validating user list in response...
+[2025-06-23 19:40:58] [INFO ] - ==> Scenario Teardown: Completed API Test
+[2025-06-23 20:53:20] [INFO ] - ==> Scenario Setup: Starting API Test
+[2025-06-23 20:53:21] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 20:53:21] [INFO ] - Sending POST request to /api/users
+[2025-06-23 20:53:23] [INFO ] - POST /api/users | Status: 201 | Body: {
+    "password": "Developer",
+    "email": "John",
+    "id": "607",
+    "createdAt": "2025-06-23T15:23:23.378Z"
+}
+[2025-06-23 20:53:23] [INFO ] - Create user response: {"password":"Developer","email":"John","id":"607","createdAt":"2025-06-23T15:23:23.378Z"}
+[2025-06-23 20:53:23] [INFO ] - Asserting response code: expected = 201, actual = 201
+[2025-06-23 20:53:24] [INFO ] - ==> Scenario Teardown: Completed API Test
+[2025-06-23 20:55:16] [INFO ] - ==> Scenario Setup: Starting API Test
+[2025-06-23 20:55:16] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 20:55:16] [INFO ] - Sending POST request to /api/users
+[2025-06-23 20:55:19] [INFO ] - POST /api/users | Status: 201 | Body: {
+    "password": "Developer",
+    "email": "John",
+    "id": "885",
+    "createdAt": "2025-06-23T15:25:18.902Z"
+}
+[2025-06-23 20:55:19] [INFO ] - Create user response: {"password":"Developer","email":"John","id":"885","createdAt":"2025-06-23T15:25:18.902Z"}
+[2025-06-23 20:55:19] [INFO ] - Asserting response code: expected = 201, actual = 201
+[2025-06-23 20:55:19] [INFO ] - ==> Scenario Teardown: Completed API Test
+[2025-06-23 20:58:51] [INFO ] - ==> Scenario Setup: Starting API Test
+[2025-06-23 20:58:52] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-23 20:58:52] [INFO ] - Sending POST request to /api/users
+[2025-06-23 20:58:55] [INFO ] - POST /api/users | Status: 201 | Body: {
+    "name": "John",
+    "job": "Developer",
+    "id": "367",
+    "createdAt": "2025-06-23T15:28:55.154Z"
+}
+[2025-06-23 20:58:55] [INFO ] - Create user response: {"name":"John","job":"Developer","id":"367","createdAt":"2025-06-23T15:28:55.154Z"}
+[2025-06-23 20:58:55] [INFO ] - Asserting response code: expected = 201, actual = 201
+[2025-06-23 20:58:55] [INFO ] - ==> Scenario Teardown: Completed API Test
+[2025-06-24 10:46:40] [INFO ] - ==> Scenario Setup: Starting API Test
+[2025-06-24 10:46:41] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-24 10:46:41] [INFO ] - Sending POST request to /api/users with payload: {name=John, job=Developer}
+[2025-06-24 10:46:46] [INFO ] - POST /api/users | Status: 201 | Body: {
+    "name": "John",
+    "job": "Developer",
+    "id": "226",
+    "createdAt": "2025-06-24T05:16:47.258Z"
+}
+[2025-06-24 10:46:46] [INFO ] - Response: {"name":"John","job":"Developer","id":"226","createdAt":"2025-06-24T05:16:47.258Z"}
+[2025-06-24 10:46:46] [INFO ] - Asserting response code: expected = 201, actual = 201
+[2025-06-24 10:46:48] [INFO ] - Asserting JSON path name: expected = John, actual = John
+[2025-06-24 10:46:48] [INFO ] - Asserting JSON path job: expected = Developer, actual = Developer
+[2025-06-24 10:46:48] [INFO ] - ==> Scenario Teardown: Completed API Test
+[2025-06-24 11:16:26] [INFO ] - ==> Scenario Setup: Starting API Test
+[2025-06-24 11:16:27] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-24 11:16:27] [INFO ] - Sending POST to /api/login
+[2025-06-24 11:16:29] [INFO ] - POST /api/login | Status: 200 | Body: {
+    "token": "QpwL5tke4Pnpja7X4"
+}
+[2025-06-24 11:16:29] [INFO ] - Login response: {"token":"QpwL5tke4Pnpja7X4"}
+[2025-06-24 11:16:29] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-24 11:16:30] [INFO ] - Received token: QpwL5tke4Pnpja7X4
+[2025-06-24 11:16:30] [INFO ] - ==> Scenario Teardown: Completed API Test
+[2025-06-24 11:16:48] [INFO ] - ==> Scenario Setup: Starting API Test
+[2025-06-24 11:16:49] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-24 11:16:49] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-24 11:16:52] [INFO ] - GET /api/users?page=2 | Status: 200 | Body: {
+    "page": 2,
+    "per_page": 6,
+    "total": 12,
+    "total_pages": 2,
+    "data": [
+        {
+            "id": 7,
+            "email": "michael.lawson@reqres.in",
+            "first_name": "Michael",
+            "last_name": "Lawson",
+            "avatar": "https://reqres.in/img/faces/7-image.jpg"
+        },
+        {
+            "id": 8,
+            "email": "lindsay.ferguson@reqres.in",
+            "first_name": "Lindsay",
+            "last_name": "Ferguson",
+            "avatar": "https://reqres.in/img/faces/8-image.jpg"
+        },
+        {
+            "id": 9,
+            "email": "tobias.funke@reqres.in",
+            "first_name": "Tobias",
+            "last_name": "Funke",
+            "avatar": "https://reqres.in/img/faces/9-image.jpg"
+        },
+        {
+            "id": 10,
+            "email": "byron.fields@reqres.in",
+            "first_name": "Byron",
+            "last_name": "Fields",
+            "avatar": "https://reqres.in/img/faces/10-image.jpg"
+        },
+        {
+            "id": 11,
+            "email": "george.edwards@reqres.in",
+            "first_name": "George",
+            "last_name": "Edwards",
+            "avatar": "https://reqres.in/img/faces/11-image.jpg"
+        },
+        {
+            "id": 12,
+            "email": "rachel.howell@reqres.in",
+            "first_name": "Rachel",
+            "last_name": "Howell",
+            "avatar": "https://reqres.in/img/faces/12-image.jpg"
+        }
+    ],
+    "support": {
+        "url": "https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral",
+        "text": "Tired of writing endless social media content? Let Content Caddy generate it for you."
+    }
+}
+[2025-06-24 11:16:52] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-24 11:16:52] [INFO ] - Validating user list in response...
+[2025-06-24 11:16:53] [INFO ] - ==> Scenario Teardown: Completed API Test
+[2025-06-24 11:17:10] [INFO ] - ==> Scenario Setup: Starting API Test
+[2025-06-24 11:17:11] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-24 11:17:11] [INFO ] - Sending GET request to endpoint: /api/users/2
+[2025-06-24 11:17:16] [INFO ] - GET /api/users/2 | Status: 200 | Body: {
+    "data": {
+        "id": 2,
+        "email": "janet.weaver@reqres.in",
+        "first_name": "Janet",
+        "last_name": "Weaver",
+        "avatar": "https://reqres.in/img/faces/2-image.jpg"
+    },
+    "support": {
+        "url": "https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral",
+        "text": "Tired of writing endless social media content? Let Content Caddy generate it for you."
+    }
+}
+[2025-06-24 11:17:16] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-24 11:17:18] [INFO ] - ==> Scenario Teardown: Completed API Test
+[2025-06-24 11:17:18] [INFO ] - ==> Scenario Setup: Starting API Test
+[2025-06-24 11:17:18] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-24 11:17:18] [INFO ] - Sending GET request with API Token to endpoint: /api/users/23
+[2025-06-24 11:17:18] [INFO ] - GET /api/users/23 | Status: 404 | Body: {
+    
+}
+[2025-06-24 11:17:18] [INFO ] - Asserting response code: expected = 404, actual = 404
+[2025-06-24 11:17:18] [INFO ] - ==> Scenario Teardown: Completed API Test
+[2025-06-24 11:17:45] [INFO ] - ==> Scenario Setup: Starting API Test
+[2025-06-24 11:17:46] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-24 11:17:46] [INFO ] - Sending POST request to /api/users with payload: {name=John, job=Developer}
+[2025-06-24 11:17:52] [INFO ] - POST /api/users | Status: 201 | Body: {
+    "name": "John",
+    "job": "Developer",
+    "id": "399",
+    "createdAt": "2025-06-24T05:47:52.695Z"
+}
+[2025-06-24 11:17:52] [INFO ] - Response: {"name":"John","job":"Developer","id":"399","createdAt":"2025-06-24T05:47:52.695Z"}
+[2025-06-24 11:17:52] [INFO ] - Asserting response code: expected = 201, actual = 201
+[2025-06-24 11:17:53] [INFO ] - Asserting JSON path name: expected = John, actual = John
+[2025-06-24 11:17:53] [INFO ] - Asserting JSON path job: expected = Developer, actual = Developer
+[2025-06-24 11:17:53] [INFO ] - ==> Scenario Teardown: Completed API Test
+[2025-06-24 11:56:45] [INFO ] - ==> Scenario Setup: Starting API Test
+[2025-06-24 11:56:45] [INFO ] - ==> Scenario Setup: Starting API Test
+[2025-06-24 11:56:45] [INFO ] - ==> Scenario Setup: Starting API Test
+[2025-06-24 11:56:45] [INFO ] - ==> Scenario Setup: Starting API Test
+[2025-06-24 11:56:45] [INFO ] - ==> Scenario Setup: Starting API Test
+[2025-06-24 11:56:45] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-24 11:56:45] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-24 11:56:45] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-24 11:56:45] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-24 11:56:45] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-24 11:56:45] [INFO ] - Sending GET request with API Token to endpoint: /api/users/23
+[2025-06-24 11:56:45] [INFO ] - Sending GET request to endpoint: /api/users/2
+[2025-06-24 11:56:45] [INFO ] - Sending GET request to endpoint: /api/users?page=2
+[2025-06-24 11:56:45] [INFO ] - Sending POST to /api/login
+[2025-06-24 11:56:45] [INFO ] - Sending POST request to /api/users with payload: {name=John, job=Developer}
+[2025-06-24 11:56:50] [INFO ] - GET /api/users/2 | Status: 200 | Body: {
+    "data": {
+        "id": 2,
+        "email": "janet.weaver@reqres.in",
+        "first_name": "Janet",
+        "last_name": "Weaver",
+        "avatar": "https://reqres.in/img/faces/2-image.jpg"
+    },
+    "support": {
+        "url": "https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral",
+        "text": "Tired of writing endless social media content? Let Content Caddy generate it for you."
+    }
+}
+[2025-06-24 11:56:50] [INFO ] - GET /api/users?page=2 | Status: 200 | Body: {
+    "page": 2,
+    "per_page": 6,
+    "total": 12,
+    "total_pages": 2,
+    "data": [
+        {
+            "id": 7,
+            "email": "michael.lawson@reqres.in",
+            "first_name": "Michael",
+            "last_name": "Lawson",
+            "avatar": "https://reqres.in/img/faces/7-image.jpg"
+        },
+        {
+            "id": 8,
+            "email": "lindsay.ferguson@reqres.in",
+            "first_name": "Lindsay",
+            "last_name": "Ferguson",
+            "avatar": "https://reqres.in/img/faces/8-image.jpg"
+        },
+        {
+            "id": 9,
+            "email": "tobias.funke@reqres.in",
+            "first_name": "Tobias",
+            "last_name": "Funke",
+            "avatar": "https://reqres.in/img/faces/9-image.jpg"
+        },
+        {
+            "id": 10,
+            "email": "byron.fields@reqres.in",
+            "first_name": "Byron",
+            "last_name": "Fields",
+            "avatar": "https://reqres.in/img/faces/10-image.jpg"
+        },
+        {
+            "id": 11,
+            "email": "george.edwards@reqres.in",
+            "first_name": "George",
+            "last_name": "Edwards",
+            "avatar": "https://reqres.in/img/faces/11-image.jpg"
+        },
+        {
+            "id": 12,
+            "email": "rachel.howell@reqres.in",
+            "first_name": "Rachel",
+            "last_name": "Howell",
+            "avatar": "https://reqres.in/img/faces/12-image.jpg"
+        }
+    ],
+    "support": {
+        "url": "https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral",
+        "text": "Tired of writing endless social media content? Let Content Caddy generate it for you."
+    }
+}
+[2025-06-24 11:56:50] [INFO ] - GET /api/users/23 | Status: 404 | Body: {
+    
+}
+[2025-06-24 11:56:50] [INFO ] - POST /api/users | Status: 201 | Body: {
+    "name": "John",
+    "job": "Developer",
+    "id": "355",
+    "createdAt": "2025-06-24T06:26:50.994Z"
+}
+[2025-06-24 11:56:50] [INFO ] - Response: {"name":"John","job":"Developer","id":"355","createdAt":"2025-06-24T06:26:50.994Z"}
+[2025-06-24 11:56:50] [INFO ] - Asserting response code: expected = 404, actual = 404
+[2025-06-24 11:56:50] [INFO ] - POST /api/login | Status: 200 | Body: {
+    "token": "QpwL5tke4Pnpja7X4"
+}
+[2025-06-24 11:56:50] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-24 11:56:50] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-24 11:56:50] [INFO ] - Asserting response code: expected = 201, actual = 201
+[2025-06-24 11:56:50] [INFO ] - Login response: {"token":"QpwL5tke4Pnpja7X4"}
+[2025-06-24 11:56:50] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-24 11:56:50] [INFO ] - Validating user list in response...
+[2025-06-24 11:56:50] [INFO ] - ==> Scenario Teardown: Completed API Test
+[2025-06-24 11:56:53] [INFO ] - ==> Scenario Teardown: Completed API Test
+[2025-06-24 11:56:53] [INFO ] - ==> Scenario Teardown: Completed API Test
+[2025-06-24 11:56:53] [INFO ] - Received token: QpwL5tke4Pnpja7X4
+[2025-06-24 11:56:53] [INFO ] - ==> Scenario Teardown: Completed API Test
+[2025-06-24 11:56:53] [INFO ] - Asserting JSON path name: expected = John, actual = John
+[2025-06-24 11:56:53] [INFO ] - Asserting JSON path job: expected = Developer, actual = Developer
+[2025-06-24 11:56:53] [INFO ] - ==> Scenario Teardown: Completed API Test
