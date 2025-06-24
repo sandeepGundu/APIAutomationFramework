@@ -87,17 +87,14 @@ public class UsersSteps
         Allure.step("Verified empty response body or {}");
     }
 
-    @When("I send a POST request to {string} with name {string} and job {string} and api Token key")
-    public void sendPostToCreateUser(String endpoint, String name, String job) {
+    @When("I send a POST request to {string} with name {string} and job {string} and token key {string} and value {string}")
+    public void sendPostToCreateUserWithCustomToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
         Map<String, String> payload = new HashMap<>();
         payload.put("name", name);
         payload.put("job", job);
 
-        String tokenKey = ConfigLoader.get("api.token.key");
-        String tokenValue = ConfigLoader.get("api.token.value");
-
-        logger.info("Sending POST request to " + endpoint + " with payload: " + payload);
-        Allure.step("POST " + endpoint + " with body: " + payload);
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + "=" + tokenValue);
+        Allure.step("POST " + endpoint + " with body: " + payload + " and token: " + tokenKey + "=" + tokenValue);
 
         context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
 
