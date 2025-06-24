@@ -112,4 +112,22 @@ public class UsersSteps
         Allure.step("Validated JSON " + path + " = " + expected);
         Assert.assertEquals(actual, expected);
     }
+
+    @When("I send a PUT request to {string} with name {string} and job {string} and api Token key")
+    public void sendPutRequestWithPayload(String endpoint, String name, String job) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        String tokenKey = ConfigLoader.get("api.token.key");
+        String tokenValue = ConfigLoader.get("api.token.value");
+
+        logger.info("Sending PUT request to " + endpoint + " with payload: " + payload);
+        Allure.step("PUT " + endpoint + " with body: " + payload);
+
+        context.response = ApiUtils.putWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response of PUT Request: " + context.response.asString());
+        Allure.step("Response received: " + context.response.asString());
+    }
 }
