@@ -31,23 +31,98 @@ public class UsersSteps
 
     public UsersSteps(TestContext context) {
         this.context = context;
+    @When("I send a POST request to {string} with name as {string} and job as {string} and api Token key as {string} and value as {string}")
+    public void sendPostRequestWithToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+        Allure.step("POST " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+
+        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response received: " + context.response.asString());
+        Allure.step("Response: " + context.response.asString());
     }
+
+}
 
     @Given("the Reqres API is available")
     public void the_api_is_available() {
         RestAssured.baseURI = "https://reqres.in";
         logger.info("Base URI set to: " + RestAssured.baseURI);
         Allure.step("Base URI set to: " + RestAssured.baseURI); // Example
+    @When("I send a POST request to {string} with name as {string} and job as {string} and api Token key as {string} and value as {string}")
+    public void sendPostRequestWithToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+        Allure.step("POST " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+
+        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response received: " + context.response.asString());
+        Allure.step("Response: " + context.response.asString());
     }
 
-    @When("I send a GET request to {string}")
+}
+
+    @When("I send a GET request to {string@When("I send a POST request to {string} with name as {string} and job as {string} and api Token key as {string} and value as {string}")
+    public void sendPostRequestWithToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+        Allure.step("POST " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+
+        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response received: " + context.response.asString());
+        Allure.step("Response: " + context.response.asString());
+    }
+
+}")
     public void i_send_get_request_to(String endpoint) {
         logger.info("Sending GET request to endpoint: " + endpoint);
         Allure.step("Sent GET request to: " + endpoint);
         context.response = ApiUtils.get(endpoint);
+    @When("I send a POST request to {string} with name as {string} and job as {string} and api Token key as {string} and value as {string}")
+    public void sendPostRequestWithToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+        Allure.step("POST " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+
+        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response received: " + context.response.asString());
+        Allure.step("Response: " + context.response.asString());
     }
 
-    @When("I send a GET request to {string} with API token")
+}
+
+    @When("I send a GET request to {string@When("I send a POST request to {string} with name as {string} and job as {string} and api Token key as {string} and value as {string}")
+    public void sendPostRequestWithToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+        Allure.step("POST " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+
+        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response received: " + context.response.asString());
+        Allure.step("Response: " + context.response.asString());
+    }
+
+} with API token")
     public void i_send_get_request_with_API_Token(String endpoint) {
         logger.info("Sending GET request with API Token to endpoint: " + endpoint);
         Allure.step("Sent GET request to: " + endpoint + " with API Token");
@@ -55,15 +130,60 @@ public class UsersSteps
         String tokenKey = ConfigLoader.get("api.token.key");
         String tokenValue = ConfigLoader.get("api.token.value");
         context.response = ApiUtils.getWithToken(endpoint, tokenKey, tokenValue);
+    @When("I send a POST request to {string} with name as {string} and job as {string} and api Token key as {string} and value as {string}")
+    public void sendPostRequestWithToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+        Allure.step("POST " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+
+        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response received: " + context.response.asString());
+        Allure.step("Response: " + context.response.asString());
     }
 
-    @Then("the response status code should be {int}")
+}
+
+    @Then("the response status code should be {int@When("I send a POST request to {string} with name as {string} and job as {string} and api Token key as {string} and value as {string}")
+    public void sendPostRequestWithToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+        Allure.step("POST " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+
+        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response received: " + context.response.asString());
+        Allure.step("Response: " + context.response.asString());
+    }
+
+}")
     public void the_response_status_should_be(int expectedStatusCode) {
         logger.info("Asserting response code: expected = " + expectedStatusCode +
                 ", actual = " + context.response.getStatusCode());
         Allure.step("Response code received: " + context.response.getStatusCode());
         Assert.assertEquals(context.response.statusCode(), expectedStatusCode, "Incorrect status code!");
+    @When("I send a POST request to {string} with name as {string} and job as {string} and api Token key as {string} and value as {string}")
+    public void sendPostRequestWithToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+        Allure.step("POST " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+
+        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response received: " + context.response.asString());
+        Allure.step("Response: " + context.response.asString());
     }
+
+}
 
     @Then("the response should contain a list of users")
     public void the_response_should_contain_user_list() {
@@ -71,23 +191,188 @@ public class UsersSteps
         List<?> users = context.response.jsonPath().getList("data");
         Assert.assertNotNull(users, "User list is null");
         Assert.assertTrue(users.size() > 0, "User list is empty");
+    @When("I send a POST request to {string} with name as {string} and job as {string} and api Token key as {string} and value as {string}")
+    public void sendPostRequestWithToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+        Allure.step("POST " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+
+        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response received: " + context.response.asString());
+        Allure.step("Response: " + context.response.asString());
     }
 
-    @Then("the response JSON path {string} should be {int}")
+}
+
+    @Then("the response JSON path {string@When("I send a POST request to {string} with name as {string} and job as {string} and api Token key as {string} and value as {string}")
+    public void sendPostRequestWithToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+        Allure.step("POST " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+
+        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response received: " + context.response.asString());
+        Allure.step("Response: " + context.response.asString());
+    }
+
+} should be {int@When("I send a POST request to {string} with name as {string} and job as {string} and api Token key as {string} and value as {string}")
+    public void sendPostRequestWithToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+        Allure.step("POST " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+
+        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response received: " + context.response.asString());
+        Allure.step("Response: " + context.response.asString());
+    }
+
+}")
     public void validateJsonPathInt(String path, int expected) {
         int actual = context.response.jsonPath().getInt(path);
         Assert.assertEquals(actual, expected);
         Allure.step("JSON validation: " + path + " == " + expected);
+    @When("I send a POST request to {string} with name as {string} and job as {string} and api Token key as {string} and value as {string}")
+    public void sendPostRequestWithToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+        Allure.step("POST " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+
+        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response received: " + context.response.asString());
+        Allure.step("Response: " + context.response.asString());
     }
+
+}
 
     @Then("the response body should be empty")
     public void verifyEmptyBody() {
         String body = context.response.body().asString().trim();
-        Assert.assertTrue(body.equals("{}") || body.isEmpty(), "Expected empty or {} but got: " + body);
-        Allure.step("Verified empty response body or {}");
+        Assert.assertTrue(body.equals("{@When("I send a POST request to {string} with name as {string} and job as {string} and api Token key as {string} and value as {string}")
+    public void sendPostRequestWithToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+        Allure.step("POST " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+
+        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response received: " + context.response.asString());
+        Allure.step("Response: " + context.response.asString());
     }
 
-    @When("I send a POST request to {string} with name {string} and job {string} and api Token key")
+}") || body.isEmpty(), "Expected empty or {@When("I send a POST request to {string} with name as {string} and job as {string} and api Token key as {string} and value as {string}")
+    public void sendPostRequestWithToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+        Allure.step("POST " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+
+        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response received: " + context.response.asString());
+        Allure.step("Response: " + context.response.asString());
+    }
+
+} but got: " + body);
+        Allure.step("Verified empty response body or {@When("I send a POST request to {string} with name as {string} and job as {string} and api Token key as {string} and value as {string}")
+    public void sendPostRequestWithToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+        Allure.step("POST " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+
+        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response received: " + context.response.asString());
+        Allure.step("Response: " + context.response.asString());
+    }
+
+}");
+    @When("I send a POST request to {string} with name as {string} and job as {string} and api Token key as {string} and value as {string}")
+    public void sendPostRequestWithToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+        Allure.step("POST " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+
+        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response received: " + context.response.asString());
+        Allure.step("Response: " + context.response.asString());
+    }
+
+}
+
+    @When("I send a POST request to {string@When("I send a POST request to {string} with name as {string} and job as {string} and api Token key as {string} and value as {string}")
+    public void sendPostRequestWithToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+        Allure.step("POST " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+
+        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response received: " + context.response.asString());
+        Allure.step("Response: " + context.response.asString());
+    }
+
+} with name {string@When("I send a POST request to {string} with name as {string} and job as {string} and api Token key as {string} and value as {string}")
+    public void sendPostRequestWithToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+        Allure.step("POST " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+
+        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response received: " + context.response.asString());
+        Allure.step("Response: " + context.response.asString());
+    }
+
+} and job {string@When("I send a POST request to {string} with name as {string} and job as {string} and api Token key as {string} and value as {string}")
+    public void sendPostRequestWithToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+        Allure.step("POST " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+
+        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response received: " + context.response.asString());
+        Allure.step("Response: " + context.response.asString());
+    }
+
+} and api Token key")
     public void sendPostToCreateUser(String endpoint, String name, String job) {
         Map<String, String> payload = new HashMap<>();
         payload.put("name", name);
@@ -103,13 +388,88 @@ public class UsersSteps
 
         logger.info("Response: " + context.response.asString());
         Allure.step("Response received: " + context.response.asString());
+    @When("I send a POST request to {string} with name as {string} and job as {string} and api Token key as {string} and value as {string}")
+    public void sendPostRequestWithToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+        Allure.step("POST " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+
+        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response received: " + context.response.asString());
+        Allure.step("Response: " + context.response.asString());
     }
 
-    @Then("the response JSON path {string} should be {string}")
+}
+
+    @Then("the response JSON path {string@When("I send a POST request to {string} with name as {string} and job as {string} and api Token key as {string} and value as {string}")
+    public void sendPostRequestWithToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+        Allure.step("POST " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+
+        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response received: " + context.response.asString());
+        Allure.step("Response: " + context.response.asString());
+    }
+
+} should be {string@When("I send a POST request to {string} with name as {string} and job as {string} and api Token key as {string} and value as {string}")
+    public void sendPostRequestWithToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+        Allure.step("POST " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+
+        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response received: " + context.response.asString());
+        Allure.step("Response: " + context.response.asString());
+    }
+
+}")
     public void validateResponseJsonString(String path, String expected) {
         String actual = context.response.jsonPath().getString(path);
         logger.info("Asserting JSON path " + path + ": expected = " + expected + ", actual = " + actual);
         Allure.step("Validated JSON " + path + " = " + expected);
         Assert.assertEquals(actual, expected);
+    @When("I send a POST request to {string} with name as {string} and job as {string} and api Token key as {string} and value as {string}")
+    public void sendPostRequestWithToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+        Allure.step("POST " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+
+        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response received: " + context.response.asString());
+        Allure.step("Response: " + context.response.asString());
     }
+
+}
+@When("I send a POST request to {string} with name as {string} and job as {string} and api Token key as {string} and value as {string}")
+    public void sendPostRequestWithToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+        Allure.step("POST " + endpoint + " with payload: " + payload + " and token: " + tokenKey + " = " + tokenValue);
+
+        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response received: " + context.response.asString());
+        Allure.step("Response: " + context.response.asString());
+    }
+
 }
