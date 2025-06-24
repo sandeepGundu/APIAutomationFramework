@@ -1,6 +1,8 @@
-@regression #@getUser @smoke
-Feature: Fetch a single user
+@regression @singleUser #@getUser @smoke
+Feature: Get single user from Reqres API
 
+  # Positive: Get user by valid ID
+  @smoke @positive
   Scenario: TC002 - Get single user (valid)
     Given the Reqres API is available
     When I send a GET request to "/api/users/2"
@@ -13,3 +15,4 @@ Feature: Fetch a single user
     When I send a GET request to "/api/users/23" with API token
     Then the response status code should be 404
     And the response body should be empty
+

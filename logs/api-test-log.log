@@ -516,3 +516,30 @@
 [2025-06-24 11:56:53] [INFO ] - Asserting JSON path name: expected = John, actual = John
 [2025-06-24 11:56:53] [INFO ] - Asserting JSON path job: expected = Developer, actual = Developer
 [2025-06-24 11:56:53] [INFO ] - ==> Scenario Teardown: Completed API Test
+[2025-06-24 14:10:10] [INFO ] - ==> Scenario Setup: Starting API Test
+[2025-06-24 14:10:11] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-24 14:10:11] [INFO ] - Sending PUT request to /api/users/2 with payload: {name=neo, job=zion leader}
+[2025-06-24 14:10:15] [INFO ] - PUT /api/users/2 | Status: 200 | Body: {
+    "name": "neo",
+    "job": "zion leader",
+    "updatedAt": "2025-06-24T08:40:16.323Z"
+}
+[2025-06-24 14:10:15] [INFO ] - Response of PUT Request: {"name":"neo","job":"zion leader","updatedAt":"2025-06-24T08:40:16.323Z"}
+[2025-06-24 14:10:15] [INFO ] - Asserting response code: expected = 200, actual = 200
+[2025-06-24 14:10:17] [INFO ] - Asserting JSON path name: expected = neo, actual = neo
+[2025-06-24 14:10:17] [INFO ] - Asserting JSON path job: expected = zion leader, actual = zion leader
+[2025-06-24 14:10:17] [INFO ] - ==> Scenario Teardown: Completed API Test
+[2025-06-24 16:14:54] [INFO ] - ==> Scenario Setup: Starting API Test
+[2025-06-24 16:14:55] [INFO ] - Base URI set to: https://reqres.in
+[2025-06-24 16:14:55] [INFO ] - Sending POST request to /api/users with payload: {name=John, job=Developer} and token: x-api-key=reqres-free-v1
+[2025-06-24 16:14:57] [INFO ] - POST /api/users | Status: 201 | Body: {
+    "name": "John",
+    "job": "Developer",
+    "id": "128",
+    "createdAt": "2025-06-24T10:44:58.115Z"
+}
+[2025-06-24 16:14:57] [INFO ] - Response from sendPostToCreateUserWithCustomToken : {"name":"John","job":"Developer","id":"128","createdAt":"2025-06-24T10:44:58.115Z"}
+[2025-06-24 16:14:57] [INFO ] - Asserting response code: expected = 201, actual = 201
+[2025-06-24 16:14:58] [INFO ] - Asserting JSON path name: expected = John, actual = John
+[2025-06-24 16:14:58] [INFO ] - Asserting JSON path job: expected = Developer, actual = Developer
+[2025-06-24 16:14:58] [INFO ] - ==> Scenario Teardown: Completed API Test

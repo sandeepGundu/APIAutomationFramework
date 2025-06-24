@@ -105,6 +105,21 @@ public class UsersSteps
         Allure.step("Response received: " + context.response.asString());
     }
 
+    @When("I send a POST request to {string} with name {string} and job {string} and token key {string} and value {string}")
+    public void sendPostToCreateUserWithCustomToken(String endpoint, String name, String job, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + "=" + tokenValue);
+        Allure.step("POST " + endpoint + " with body: " + payload + " and token: " + tokenKey + "=" + tokenValue);
+
+        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+
+        logger.info("Response from sendPostToCreateUserWithCustomToken : " + context.response.asString());
+        Allure.step("Response received: " + context.response.asString());
+    }
+
     @Then("the response JSON path {string} should be {string}")
     public void validateResponseJsonString(String path, String expected) {
         String actual = context.response.jsonPath().getString(path);
