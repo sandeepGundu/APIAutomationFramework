@@ -16,3 +16,10 @@ Feature: Get single user from Reqres API
     Then the response status code should be 404
     And the response body should be empty
 
+  @negative
+  Scenario: TC003 - Get single user (invalid ID)
+    Given the Reqres API is available
+    When I send a GET request to "/api/users/23" with token key "" and value ""
+    Then the response status code should be 404
+    And the response body should be empty
+

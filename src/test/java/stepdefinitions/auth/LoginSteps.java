@@ -26,28 +26,52 @@ public class LoginSteps
 
     @When("I send a POST request to {string} with email {string} and password {string} and api Token key")
     public void sendLoginRequest(String endpoint, String email, String password) {
-        Map<String, String> body = new HashMap<>();
-        body.put("email", email);
-        body.put("password", password);
+        Map<String, String> payload = new HashMap<>();
+        payload.put("email", email);
+        payload.put("password", password);
 
-        logger.info("Sending POST to " + endpoint);
-        Allure.step("Sending POST to " + endpoint);
-        Allure.step("Sending login request to " + endpoint + " with body: " + body);
+        Map<String, String> authHeaders = ApiUtils.resolveAuth();  // fallback token from config
 
-        String tokenKey = ConfigLoader.get("api.token.key");
-        String tokenValue = ConfigLoader.get("api.token.value");
+        logger.info("POST login to " + endpoint + " with headers: " + authHeaders);
+        Allure.step("Login request: " + endpoint + " | Body: " + payload + " | Headers: " + authHeaders);
 
-        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, body);
+        if(authHeaders != null && !authHeaders.isEmpty())
+        {
+            context.response = ApiUtils.postWithToken(endpoint, authHeaders, payload);
 
-        logger.info("Login response: " + context.response.asString());
-        Allure.step("Response Code: " + context.response.statusCode());
+            logger.info("Login response: " + context.response.asString());
+            Allure.step("Response Code: " + context.response.statusCode());
+        }
+
     }
 
     @Then("the login response should contain token")
     public void verifyLoginResponse() {
         String token = context.response.jsonPath().getString("token");
         Assert.assertNotNull(token, "Token should not be null");
+        Assert.assertTrue(token != null && !token.trim().isEmpty(), "Token should not be null or empty");
         logger.info("Received token: " + token);
         Allure.step("Verified token in login response: " + token);
+    }
+
+    @When("I send a POST request to {string} with email {string} and password {string} and token key {string} and value {string}")
+    public void sendLoginRequestWithCustomToken(String endpoint, String email, String password, String tokenKey, String tokenValue) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("email", email);
+        payload.put("password", password);
+
+        Map<String, String> authHeaders = ApiUtils.resolveAuth(tokenKey, tokenValue);
+
+        logger.info("Sending login POST request to " + endpoint + " with headers: " + authHeaders);
+        Allure.step("Login request to " + endpoint + " with headers: " + authHeaders + " and body: " + payload);
+
+        if(authHeaders != null && !authHeaders.isEmpty())
+        {
+            context.response = ApiUtils.postWithToken(endpoint, authHeaders, payload);
+
+            logger.info("Login POST response: " + context.response.asString());
+            Allure.step("Response Code: " + context.response.statusCode());
+        }
+
     }
 }

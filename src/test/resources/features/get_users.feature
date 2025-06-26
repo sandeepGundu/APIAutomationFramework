@@ -14,7 +14,9 @@ Feature: Get list of users from Reqres API
   Scenario: TC002 - Get users with invalid page param
     Given the Reqres API is available
     When I send a GET request to "/api/users?page=abc"
-    Then the response status code should be 400
+    Then the response status code should be 401
+    #But getting the status code as 200
+    #Then the response status code should be 200
 
   # Negative: Missing endpoint
   @negative
@@ -22,3 +24,5 @@ Feature: Get list of users from Reqres API
     Given the Reqres API is available
     When I send a GET request to "/api/userzz"
     Then the response status code should be 404
+    #But getting the status code as 200
+    #Then the response status code should be 200

@@ -4,6 +4,8 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.response.Response;
+
+import java.util.Collections;
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
@@ -13,22 +15,22 @@ public class ApiUtils
 {
     private static final Logger logger = LoggerUtil.getLogger(ApiUtils.class);
 
-    public static String tokenKey = ConfigLoader.get("api.token.key");
-    public static String tokenValue = ConfigLoader.get("api.token.value");
-
     // ---------- GET ----------
     public static Response get(String endpoint) {
-        Response response = given().when()
+        Response response = given()
+                .when()
                 .get(endpoint)
                 .then().extract().response();
         logResponse("GET", endpoint, response);
         return response;
     }
 
-    public static Response getWithToken(String endpoint, String tokenKey, String tokenValue) {
-        Response response =  given().header(tokenKey, tokenValue).when()
-                .get(endpoint)
+    public static Response getWithToken(String endpoint, Map<String, String> headers) {
+        Response response = given()
+                .headers(headers)
+                .when().get(endpoint)
                 .then().extract().response();
+
         logResponse("GET", endpoint, response);
         return response;
     }
@@ -44,10 +46,10 @@ public class ApiUtils
         return response;
     }
 
-    public static Response postWithToken(String endpoint, String tokenKey, String tokenValue, Map<String, String> jsonPayload) {
+    public static Response postWithToken(String endpoint, Map<String, String> headers, Map<String, String> jsonPayload) {
         Response response = given()
+                .headers(headers)
                 .contentType(ContentType.JSON)
-                .header(tokenKey, tokenValue)
                 .body(jsonPayload)
                 .when().post(endpoint)
                 .then().extract().response();
@@ -57,10 +59,10 @@ public class ApiUtils
     }
 
     // ---------- PUT ----------
-    public static Response putWithToken(String endpoint, String tokenKey, String tokenValue, Map<String, String> jsonPayload) {
+    public static Response putWithToken(String endpoint, Map<String, String> headers, Map<String, String> jsonPayload) {
         Response response = given()
+                .headers(headers)
                 .contentType(ContentType.JSON)
-                .header(tokenKey, tokenValue)
                 .body(jsonPayload)
                 .when().put(endpoint)
                 .then().extract().response();
@@ -70,21 +72,15 @@ public class ApiUtils
     }
 
     // ---------- DELETE ----------
-    public static Response deleteWithToken(String endpoint, String tokenKey, String tokenValue) {
+    public static Response deleteWithToken(String endpoint, Map<String, String> headers) {
         Response response = given()
-                .header(tokenKey, tokenValue)
+                .headers(headers)
                 .when().delete(endpoint)
                 .then().extract().response();
 
         logResponse("DELETE", endpoint, response);
         return response;
     }
-
-    /*public static Response request(String method, String endpoint, Map<String, String> headers, Object body) {
-        RequestSpecification spec = given().headers(headers);
-        if (body != null) spec.contentType(ContentType.JSON).body(body);
-        return spec.request(method, endpoint).then().extract().response();
-    }*/
 
     // ---------- Response Logger ----------
     private static void logResponse(String method, String endpoint, Response response) {
@@ -98,15 +94,49 @@ public class ApiUtils
                 ":\n" + response.body().asPrettyString());
     }
 
-    public static Map<String, String> resolveAuth(String overrideKey, String overrideValue) {
-        String key = overrideKey != null && !overrideKey.isEmpty()
-                ? overrideKey
-                : ConfigLoader.get("api.token.key");
+    // For explicit key/value override:
+    public static Map<String, String> resolveAuth(String tokenKey, String tokenValue) {
+        boolean missingKey = tokenKey == null || tokenKey.trim().isEmpty();
+        boolean missingValue = tokenValue == null || tokenValue.trim().isEmpty();
 
-        String value = overrideValue != null && !overrideValue.isEmpty()
-                ? overrideValue
-                : ConfigLoader.get("api.token.value");
+        if (missingKey && missingValue) {
+            // Intentionally skip token
+            return Collections.emptyMap();
+        }
 
-        return Map.of(key, value);
+        if (missingKey || missingValue) {
+            throw new RuntimeException("Token key/value incomplete: key=" + tokenKey + ", value=" + tokenValue);
+        }
+
+        return Map.of(tokenKey, tokenValue);
     }
+
+    // Another method for default (fallback) call:
+    public static Map<String, String> resolveAuth() {
+        String key = ConfigLoader.get("api.token.key");
+        String value = ConfigLoader.get("api.token.value");
+
+        boolean missingKey = false, missingValue = false;
+
+        if (key == null || key.trim().isEmpty()) {
+            //throw new RuntimeException("Missing API token key in config");
+            missingKey = true;
+        }
+
+        if (value == null || value.trim().isEmpty()) {
+            //throw new RuntimeException("Missing API token value in config");
+            missingValue = true;
+        }
+
+        if (missingKey && missingValue) {
+            logger.warn("No token supplied — proceeding without authentication.");
+            return Collections.emptyMap();
+        }
+        else {
+            assert key != null;
+            assert value != null;
+            return Map.of(key, value);
+        }
+    }
+
 }

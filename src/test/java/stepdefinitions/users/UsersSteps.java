@@ -3,6 +3,7 @@ package stepdefinitions.users;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.datatable.DataTable;
 import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import org.apache.logging.log4j.Logger;
@@ -49,12 +50,16 @@ public class UsersSteps
 
     @When("I send a GET request to {string} with API token")
     public void i_send_get_request_with_API_Token(String endpoint) {
-        logger.info("Sending GET request with API Token to endpoint: " + endpoint);
-        Allure.step("Sent GET request to: " + endpoint + " with API Token");
-        Map<String, String> apiToken = new HashMap<>();
+        /*Map<String, String> apiToken = new HashMap<>();
         String tokenKey = ConfigLoader.get("api.token.key");
-        String tokenValue = ConfigLoader.get("api.token.value");
-        context.response = ApiUtils.getWithToken(endpoint, tokenKey, tokenValue);
+        String tokenValue = ConfigLoader.get("api.token.value");*/
+
+        Map<String, String> authHeader = ApiUtils.resolveAuth(); // Fallback from config
+
+        logger.info("Sending GET request with headers to endpoint: " + endpoint);
+        Allure.step("Sent GET request to: " + endpoint + " with headers:" + authHeader);
+
+        context.response = ApiUtils.getWithToken(endpoint, authHeader);
     }
 
     @Then("the response status code should be {int}")
@@ -93,13 +98,39 @@ public class UsersSteps
         payload.put("name", name);
         payload.put("job", job);
 
-        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + "=" + tokenValue);
-        Allure.step("POST " + endpoint + " with body: " + payload + " and token: " + tokenKey + "=" + tokenValue);
+        Map<String, String> authHeaders = ApiUtils.resolveAuth(tokenKey, tokenValue);
 
-        context.response = ApiUtils.postWithToken(endpoint, tokenKey, tokenValue, payload);
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and headers: " + authHeaders);
+        Allure.step("POST " + endpoint + " with body: " + payload + " and headers: " + authHeaders);
 
-        logger.info("Response: " + context.response.asString());
-        Allure.step("Response received: " + context.response.asString());
+        if(authHeaders != null && !authHeaders.isEmpty())
+        {
+            context.response = ApiUtils.postWithToken(endpoint, authHeaders, payload);
+
+            logger.info("Response: " + context.response.asString());
+            Allure.step("Response received: " + context.response.asString());
+        }
+    }
+
+    @When("I send a POST request to {string} with name {string} and job {string} and api Token key")
+    public void sendPostToCreateUserWithDefaultToken(String endpoint, String name, String job) {
+        Map<String, String> payload = new HashMap<>();
+        payload.put("name", name);
+        payload.put("job", job);
+
+        //Map<String, String> authHeaders = ApiUtils.resolveAuth(tokenKey, tokenValue);
+        Map<String, String> authHeaders = ApiUtils.resolveAuth(); // fallback
+
+        logger.info("Sending POST request to " + endpoint + " with payload: " + payload + " and default headers: " + authHeaders);
+        Allure.step("POST " + endpoint + " with body: " + payload + " and default headers: " + authHeaders);
+
+        if(authHeaders != null && !authHeaders.isEmpty())
+        {
+            context.response = ApiUtils.postWithToken(endpoint, authHeaders, payload);
+
+            logger.info("Response received: " + context.response.asString());
+            Allure.step("Response received: " + context.response.asString());
+        }
     }
 
     @Then("the response JSON path {string} should be {string}")
@@ -116,15 +147,59 @@ public class UsersSteps
         payload.put("name", name);
         payload.put("job", job);
 
-        String tokenKey = ConfigLoader.get("api.token.key");
-        String tokenValue = ConfigLoader.get("api.token.value");
+        /*String tokenKey = ConfigLoader.get("api.token.key");
+        String tokenValue = ConfigLoader.get("api.token.value");*/
+        Map<String, String> authHeaders = ApiUtils.resolveAuth(); // fallback
+        //Map<String, String> authHeader = ApiUtils.resolveAuth(keyOverride, valueOverride);
 
         logger.info("Sending PUT request to " + endpoint + " with payload: " + payload);
-        Allure.step("PUT " + endpoint + " with body: " + payload);
+        Allure.step("PUT " + endpoint + " with body: " + payload + " and headers: " + authHeaders);
+        //Allure.step("PUT " + endpoint + " with body: " + payload);
 
-        context.response = ApiUtils.putWithToken(endpoint, tokenKey, tokenValue, payload);
+        if(authHeaders != null && !authHeaders.isEmpty())
+        {
+            context.response = ApiUtils.putWithToken(endpoint, authHeaders, payload);
 
+            logger.info("Response of PUT Request: " + context.response.asString());
+            Allure.step("Response received: " + context.response.asString());
+        }
+
+    }
+
+    @When("I send a DELETE request to {string} with token key {string} and value {string}")
+    public void sendDeleteRequestWithDynamicToken(String endpoint, String tokenKey, String tokenValue) {
+        Map<String, String> authHeaders = ApiUtils.resolveAuth(tokenKey, tokenValue);
+
+        logger.info("Sending DELETE request to " + endpoint + " with headers: " + authHeaders);
+        Allure.step("DELETE " + endpoint + " with headers: " + authHeaders);
+
+        if(authHeaders != null && !authHeaders.isEmpty())
+        {
+            context.response = ApiUtils.deleteWithToken(endpoint, authHeaders);
+
+            logger.info("Response of DELETE Request: " + context.response.asString());
+            Allure.step("Response of DELETE received: " + context.response.asString());
+        }
+
+    }
+
+    @When("I send a PUT request to {string} with token key {string} and value {string} and the following data:")
+    public void sendPutRequestWithDataTable(String endpoint, String tokenKey, String tokenValue, DataTable dataTable) {
+        // Parse the DataTable into a Map
+        List<Map<String, String>> rows = dataTable.asMaps(String.class, String.class);
+        Map<String, String> payload = rows.get(0); // Assuming single row for simplicity
+
+        // Log and report the request
+        logger.info("Sending PUT request to " + endpoint + " with payload: " + payload + " and token: " + tokenKey + "=" + tokenValue);
+        Allure.step("PUT " + endpoint + " with body: " + payload + " and token: " + tokenKey + "=" + tokenValue);
+
+        // Send the PUT request
+        Map<String, String> headers = ApiUtils.resolveAuth(tokenKey, tokenValue);
+        context.response = ApiUtils.putWithToken(endpoint, headers, payload);
+
+        // Log and report the response
         logger.info("Response of PUT Request: " + context.response.asString());
         Allure.step("Response received: " + context.response.asString());
     }
+
 }

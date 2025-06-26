@@ -36,3 +36,5 @@ Feature: Update Users via PUT request
       | name  | job   |
       | Test  | Lead  |
     Then the response status code should be 404
+    #it is giving the status code as 200 since, it is updating the user details for invalid ID
+    #Then the response status code should be 200
